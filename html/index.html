@@ -149,6 +149,20 @@
         <div>{{LedIntensity}} [0-100]</div>
     </div>
 
+    <h2 class="text-center">Sensors</h2>
+    <div class="flex-table">
+        <div class="row">BME280 Sensor:</div>
+        <div>{{#BME280Present}}Present{{/BME280Present}}{{^BME280Present}}Not present{{/BME280Present}}</div>
+        <div class="row">BME280 SCL Pin:</div>
+        <div>{{BME280SCLPin}}</div>
+        <div class="row">BME280 SDA Pin:</div>
+        <div>{{BME280SDAPin}}</div>
+        <div class="row">Battery Reader Sensor:</div>
+        <div>{{#BatteryReaderPresent}}Present{{/BatteryReaderPresent}}{{^BatteryReaderPresent}}Not present{{/BatteryReaderPresent}}</div>
+        <div class="row">Battery Reader I/O Pin:</div>
+        <div>{{BatteryReaderIOPin}}</div>
+    </div>
+
     <h2 class="text-center">Network</h2>
     <div class="flex-table">
         <div class="row">Host name:</div>
@@ -165,6 +179,18 @@
         <div>{{IpV4}}</div>
         <div class="row">IPv6 address:</div>
         <div>{{IpV6}}</div>
+    </div>
+
+    <h2 class="text-center">MQTT Settings</h2>
+    <div class="flex-table">
+        <div class="row">MQTT Server:</div>
+        <div>{{MQTTServer}}</div>
+        <div class="row">MQTT Port:</div>
+        <div>{{MQTTPort}}</div>
+        <div class="row">MQTT User:</div>
+        <div>{{MQTTUser}}</div>
+        <div class="row">MQTT Password:</div>
+        <div>{{MQTTPassword}}</div>
     </div>
 
     {{#NetworkState.ApMode}}
